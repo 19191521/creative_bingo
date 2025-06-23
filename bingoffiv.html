@@ -1,0 +1,306 @@
+<html lang="fr"><!--CHANGE LOG
+-On visual: change font/look?
+-On content: all characters, writing prompt, visual prompt, general prompts, location, items...
+
+
+--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta name="Author" content="Iyliss">
+		<meta name="Keywords" content="Web,HTML5">
+		<meta name="Description" content="Dress up"> 
+		<title> FFIV creative bingo</title>
+		 <link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<!--Choice of prompts <> --> <div class="mainBlock lists" >
+		<button onclick="fillBingo()">
+			Fill Bingo
+		</button>
+		<label for="quantity">Bingo size:</label>
+		<input type="number" id="bingoSize" value="3" min="2" max="8">
+		
+		<button type="button" class="collapsible" onclick="openList('ffivChars')">FFIV Characters</button>
+		<div class="content" id="ffivChars">
+		<input type="checkbox" checked onclick="toggle(this, 'ffivCharscheck')"  > Select All<br>
+	    <input type="checkbox" checked class="ffivCharscheck" name="item" value="Cecil">Cecil<br>
+		<input type="checkbox" checked class="ffivCharscheck" name="item" value="Rosa">Rosa<br>
+		<input type="checkbox" checked class="ffivCharscheck" name="item" value="Kain">Kain<br>
+		<input type="checkbox" checked class="ffivCharscheck" name="item" value="Golbez">Golbez<br>
+		<input type="checkbox" checked class="ffivCharscheck" name="item" value="Yang">Yang<br>
+		<input type="checkbox" checked class="ffivCharscheck" name="item" value="Cid">Cid<br>
+		<input type="checkbox" checked class="ffivCharscheck" name="item" value="Rydia">Rydia<br>
+		<input type="checkbox" checked class="ffivCharscheck" name="item" value="Edge">Edge<br>
+		<input type="checkbox" checked class="ffivCharscheck" name="item" value="Palom">Palom<br>
+		<input type="checkbox" checked class="ffivCharscheck" name="item" value="Porom">Porom<br>
+		<input type="checkbox" checked class="ffivCharscheck" name="item" value="Edward">Edward<br>
+		<input type="checkbox" checked class="ffivCharscheck" name="item" value="Tellah">Tellah<br>
+		<input type="checkbox" checked class="ffivCharscheck" name="item" value="FuSoYa">FuSoYa<br>
+		<input type="checkbox" checked class="ffivCharscheck" name="item" value="Rubicante">Rubicante<br>
+		<input type="checkbox" checked class="ffivCharscheck" name="item" value="Scarmiglione">Scarmiglione<br>
+		<input type="checkbox" checked class="ffivCharscheck" name="item" value="Barbariccia">Barbariccia<br>
+		<input type="checkbox" checked class="ffivCharscheck" name="item" value="Cagnazzo">Cagnazzo<br>
+		<input type="checkbox" checked class="ffivCharscheck" name="item" value="Rubicante">Rubicante<br>
+		<input type="checkbox" checked class="ffivCharscheck" name="item" value="Zemus">Zemus<br>
+		<input type="checkbox" checked class="ffivCharscheck" name="item" value="KluYa">KluYa<br>
+		<input type="checkbox" checked class="ffivCharscheck" name="item" value="Anna">Anna<br>
+		<input type="checkbox" checked class="ffivCharscheck" name="item" value="King of Baron">King of Baron<br>
+		<input type="checkbox" checked class="ffivCharscheck" name="item" value="Cecilia">Cecilia<br>
+		</div>
+		<button type="button" class="collapsible" onclick="openList('tayChars')">FFIV TAY Characters</button>
+		<div class="content" id="tayChars">
+		<input type="checkbox" checked onclick="toggle(this, 'tayCharscheck')"  > Select All<br>
+	    <input type="checkbox" checked class="tayCharscheck" name="item" value="Ceodore">Ceodore<br>
+		<input type="checkbox" checked class="tayCharscheck" name="item" value="Leonora">Leonora<br>
+		<input type="checkbox" checked class="tayCharscheck" name="item" value="Ursula">Ursula<br>
+		<input type="checkbox" checked class="tayCharscheck" name="item" value="Luca">Luca<br>
+		<input type="checkbox" checked class="tayCharscheck" name="item" value="Harley">Harley<br>
+		<input type="checkbox" checked class="tayCharscheck" name="item" value="Gekkou">Gekkou<br>
+		<input type="checkbox" checked class="tayCharscheck" name="item" value="Izayoi">Izayoi<br>
+		<input type="checkbox" checked class="tayCharscheck" name="item" value="Zangetsu">Zangetsu<br>
+		<input type="checkbox" checked class="tayCharscheck" name="item" value="Tsukinowa">Tsukinowa<br>
+		<input type="checkbox" checked class="tayCharscheck" name="item" value="Cuore">Cuore<br>
+		</div>
+		<button type="button" class="collapsible" onclick="openList('locations')">Locations</button>
+		<div class="content" id="locations">
+		<input type="checkbox" checked onclick="toggle(this, 'locationscheck')"  > Select All<br>
+	    <input type="checkbox" checked class="locationscheck" name="item" value="Baron">Baron<br>
+		<input type="checkbox" checked class="locationscheck" name="item" value="Mist">Mist<br>
+		<input type="checkbox" checked class="locationscheck" name="item" value="Kaipo">Kaipo<br>
+		<input type="checkbox" checked class="locationscheck" name="item" value="Damcyan">Damcyan<br>
+		<input type="checkbox" checked class="locationscheck" name="item" value="Fabul">Fabul<br>
+		<input type="checkbox" checked class="locationscheck" name="item" value="Mysidia">Damcyan<br>
+		<input type="checkbox" checked class="locationscheck" name="item" value="Mount Ordeals">Mount Ordeals<br>
+		<input type="checkbox" checked class="locationscheck" name="item" value="Troia">Troia<br>
+		<input type="checkbox" checked class="locationscheck" name="item" value="Tower of_Zot">Tower of Zot<br>
+		<input type="checkbox" checked class="locationscheck" name="item" value="Tower of Babil">Tower of Babil<br>
+		<input type="checkbox" checked class="locationscheck" name="item" value="Eblan">Eblan<br>
+		<input type="checkbox" checked class="locationscheck" name="item" value="Feymarch">Feymarch<br>
+		<input type="checkbox" checked class="locationscheck" name="item" value="Dwarven Castle">Dwarven Castle<br>
+		<input type="checkbox" checked class="locationscheck" name="item" value="Red Moon">Red Moon<br>
+		</div>
+		<button type="button" class="collapsible" onclick="openList('ffivElem')">FFIV Elements</button>
+		<div class="content" id="ffivElem">
+		<input type="checkbox" checked onclick="toggle(this, 'ffivElemcheck')"  > Select All<br>
+	    	<input type="checkbox" checked class="ffivElemcheck" name="item" value="Red Wings">Red Wings<br>
+	    	<input type="checkbox" checked class="ffivElemcheck" name="item" value="Dragoon">Dragoons<br>
+	    	<input type="checkbox" checked class="ffivElemcheck" name="item" value="Dark Knight">Dark Knight<br>
+	    	<input type="checkbox" checked class="ffivElemcheck" name="item" value="Paladin">Paladin<br>
+	    	<input type="checkbox" checked class="ffivElemcheck" name="item" value="White Magic">White Magic<br>
+	    	<input type="checkbox" checked class="ffivElemcheck" name="item" value="Black Magic">Black Magic<br>
+	    	<input type="checkbox" checked class="ffivElemcheck" name="item" value="Sumon">Sumon<br>
+	    	<input type="checkbox" checked class="ffivElemcheck" name="item" value="Monk">Monk<br>
+	    	<input type="checkbox" checked class="ffivElemcheck" name="item" value="Bard">Bard<br>
+	    	<input type="checkbox" checked class="ffivElemcheck" name="item" value="Ninja">Ninja<br>
+	    	<input type="checkbox" checked class="ffivElemcheck" name="item" value="Lunarian">Lunarian<br>
+	    	<input type="checkbox" checked class="ffivElemcheck" name="item" value="Excalibur">Excalibur<br>
+	    	<input type="checkbox" checked class="ffivElemcheck" name="item" value="Trials">Trials<br>
+	    	<input type="checkbox" checked class="ffivElemcheck" name="item" value="Airship">Airship<br>
+	    	<input type="checkbox" checked class="ffivElemcheck" name="item" value="Dragon">Dragon<br>
+	    	<input type="checkbox" checked class="ffivElemcheck" name="item" value="Sylph">Sylph<br>
+	    	<input type="checkbox" checked class="ffivElemcheck" name="item" value="Justice">Justice<br>
+	    	<input type="checkbox" checked class="ffivElemcheck" name="item" value="Insect">Insect<br>
+	    	<input type="checkbox" checked class="ffivElemcheck" name="item" value="Royal">Royal<br>
+	    	<input type="checkbox" checked class="ffivElemcheck" name="item" value="War">War<br>
+	    	<input type="checkbox" checked class="ffivElemcheck" name="item" value="Love">Love<br>
+		</div>
+		<button type="button" class="collapsible" onclick="openList('ffivMusic')">FFIV Music</button>
+		<div class="content" id="ffivMusic">
+		<input type="checkbox" checked onclick="toggle(this, 'ffivMusiccheck')" > Select All<br>
+		<input type="checkbox" checked class="ffivMusiccheck" name="item" value="Theme of Love">Theme of Love<br>
+		<input type="checkbox" checked class="ffivMusiccheck" name="item" value="Main Theme">Main Theme<br>
+		<input type="checkbox" checked class="ffivMusiccheck" name="item" value="Into_the Darkness">Into the Darkness<br>
+		<input type="checkbox" checked class="ffivMusiccheck" name="item" value="Cry_in Sorrow">Cry in Sorrow<br>
+		<input type="checkbox" checked class="ffivMusiccheck" name="item" value="Melody of Lute">Melody of Lute<br>
+		<input type="checkbox" checked class="ffivMusiccheck" name="item" value="Suspicion">Suspicion<br>
+		<input type="checkbox" checked class="ffivMusiccheck" name="item" value="Clad_in Darkness">Clad in Darkness<br>
+		<input type="checkbox" checked class="ffivMusiccheck" name="item" value="Illusionary World">Illusionary World<br>
+		<input type="checkbox" checked class="ffivMusiccheck" name="item" value="Another Moon">Another Moon<br>
+		<input type="checkbox" checked class="ffivMusiccheck" name="item" value="Battle with_the Four_Fiends">Battle with the Four Fiends<br>
+		</div>
+		<button type="button" class="collapsible" onclick="openList('creative')">Creative Prompts</button>
+		<div class="content" id="creative">
+		<input type="checkbox" checked onclick="toggle(this, 'creativecheck')"  > Select All<br>
+	    	<input type="checkbox" checked class="creativecheck" name="item" value="Crossover">Crossover<br>
+		<input type="checkbox" checked class="creativecheck" name="item" value="Angst">Angst<br>
+		<input type="checkbox" checked class="creativecheck" name="item" value="Fluff">Fluff<br>
+		<input type="checkbox" checked class="creativecheck" name="item" value="Hurt/ Comfort">Hurt/Comfort<br>
+		<input type="checkbox" checked class="creativecheck" name="item" value="Canon Divergence">Canon Divergence<br>
+		<input type="checkbox" checked class="creativecheck" name="item" value="Alternate Universe">Alternate Universe<br>
+		<input type="checkbox" checked class="creativecheck" name="item" value="Missing Scene">Missing Scene<br>
+		<input type="checkbox" checked class="creativecheck" name="item" value="Fix-it">Fix-it<br>
+		<input type="checkbox" checked class="creativecheck" name="item" value="Rarepair">Rarepair<br>
+		<input type="checkbox" checked class="creativecheck" name="item" value="Humor">Humor<br>
+		
+		</div>
+		<button type="button" class="collapsible" onclick="openList('angst')">Angst/Whump Prompts</button>
+		<div class="content" id="angst">
+		<input type="checkbox" onclick="toggle(this, 'angstcheck')"> Select All<br>
+	    	<input type="checkbox" class="angstcheck" name="item" value="Wounds">Wounds<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Abuse">Abuse<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Nightmare">Nightmate<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Death">Death<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Insomnia">Insomnia<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Torture">Torture<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Abandon">Abandon<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Grief">Grief<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Scar">Scar<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Sleep Deprivation">Sleep Deprivation<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Scream">Scream<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Gaslighting">Gaslighting<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Brainwashing">Brainwashing<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Punishment">Punishment<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Humiliation">Humiliation<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Mutilation">Mutilation<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Sickness">Sickness<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Terror">Terror<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Blood">Blood<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Isolation">Isolation<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Chained">Chained<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Guilt">Guilt<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Vengeance">Vengeance<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Hunger">Hunger<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Denial">Denial<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Dread">Dread<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Hatred">Hatred<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Hallucination">Hallucination<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Loss">Loss<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Betrayal">Betrayal<br>
+		<input type="checkbox" class="angstcheck" name="item" value="Voiceless">Voiceless<br>
+		</div>
+		
+		<button type="button" class="collapsible" onclick="openList('fluff')">Fluff/Comfort Prompts</button>
+		<div class="content" id="fluff">
+		<input type="checkbox" onclick="toggle(this, 'fluffcheck')"> Select All<br>
+	    	<input type="checkbox" class="fluffcheck" name="item" value="Joy">Joy<br>
+	    	<input type="checkbox" class="fluffcheck" name="item" value="Peace">Peace<br>
+	    	<input type="checkbox" class="fluffcheck" name="item" value="Hug">Hug<br>
+	    	<input type="checkbox" class="fluffcheck" name="item" value="Kiss">Kiss<br>
+	    	<input type="checkbox" class="fluffcheck" name="item" value="Safe">Safe<br>
+	    	<input type="checkbox" class="fluffcheck" name="item" value="Healing">Healing<br>
+	    	<input type="checkbox" class="fluffcheck" name="item" value="Victory">Victory<br>
+	    	<input type="checkbox" class="fluffcheck" name="item" value="Listening">Listening<br>
+	    	<input type="checkbox" class="fluffcheck" name="item" value="Joy">Joy<br>
+	    	<input type="checkbox" class="fluffcheck" name="item" value="Forgiveness">Forgiveness<br>
+	    	<input type="checkbox" class="fluffcheck" name="item" value="Rest">Rest<br>
+	    	
+		</div>
+		
+		<button type="button" class="collapsible" onclick="openList('theme')">Themed Prompts</button>
+		<div class="content" id="theme">
+		<input type="checkbox" onclick="toggle(this, 'themecheck')"> Select All<br>
+	    	<input type="checkbox" class="themecheck" name="item" value="Romance">Romance<br>
+		<input type="checkbox" class="themecheck" name="item" value="Family">Family<br>
+		<input type="checkbox" class="themecheck" name="item" value="Sibling">Sibling<br>
+		<input type="checkbox" class="themecheck" name="item" value="Parent">Parent<br>
+		<input type="checkbox" class="themecheck" name="item" value="Friendship">Friendship<br>
+		<input type="checkbox" class="themecheck" name="item" value="Ennemies">Ennemies<br>
+		<input type="checkbox" class="themecheck" name="item" value="Sleep">Sleep<br>
+		<input type="checkbox" class="themecheck" name="item" value="Dream">Dream<br>
+		<input type="checkbox" class="themecheck" name="item" value="Distance">Distance<br>
+		<input type="checkbox" class="themecheck" name="item" value="Warmth">Warmth<br>
+		<input type="checkbox" class="themecheck" name="item" value="Cold">Cold<br>
+		<input type="checkbox" class="themecheck" name="item" value="Meeting">Meeting<br>
+		<input type="checkbox" class="themecheck" name="item" value="Home">Home<br>
+		<input type="checkbox" class="themecheck" name="item" value="Confession">Confession<br>
+		<input type="checkbox" class="themecheck" name="item" value="Battle">Battle<br>
+		<input type="checkbox" class="themecheck" name="item" value="Secret">Secret<br>
+		<input type="checkbox" class="themecheck" name="item" value="Again">Again<br>
+		<input type="checkbox" class="themecheck" name="item" value="Change">Change<br>
+		<input type="checkbox" class="themecheck" name="item" value="Time Loop">Time Loop<br>
+		<input type="checkbox" class="themecheck" name="item" value="Fantasy">Fantasy<br>
+		<input type="checkbox" class="themecheck" name="item" value="Modern">Modern<br>
+		<input type="checkbox" class="themecheck" name="item" value="Music">Music<br>
+		<input type="checkbox" class="themecheck" name="item" value="Dance">Dance<br>
+		<input type="checkbox" class="themecheck" name="item" value="Food">Food<br>
+		<input type="checkbox" class="themecheck" name="item" value="Lost">Lost<br>
+		<input type="checkbox" class="themecheck" name="item" value="Gaze">Gaze<br>
+		<input type="checkbox" class="themecheck" name="item" value="Perfection">Perfection<br>
+		<input type="checkbox" class="themecheck" name="item" value="Time">Time<br>
+		<input type="checkbox" class="themecheck" name="item" value="Falling">Falling<br>
+		<input type="checkbox" class="themecheck" name="item" value="Secret">Secret<br>
+		<input type="checkbox" class="themecheck" name="item" value="Faith">Faith<br>
+		<input type="checkbox" class="themecheck" name="item" value="Message">Message<br>
+		<input type="checkbox" class="themecheck" name="item" value="Fragile">Fragile<br>
+
+
+		
+		</div>
+		<button type="button" class="collapsible" onclick="openList('writing')">Writing Prompts</button>
+		<div class="content" id="writing">
+		<input type="checkbox"  onclick="toggle(this, 'writingcheck')"  > Select All<br>
+	    	<input type="checkbox"  class="writingcheck" name="item" value="First Personn POV">First Personn POV<br>
+		<input type="checkbox"  class="writingcheck" name="item" value="Second Person POV">Second Person POV<br>
+		<input type="checkbox"  class="writingcheck" name="item" value="Third Person POV">Third Person POV<br>
+		<input type="checkbox"  class="writingcheck" name="item" value="Past Tense">Past Tense<br>
+		<input type="checkbox"  class="writingcheck" name="item" value="Present Tense">Present Tense<br>
+		<input type="checkbox"  class="writingcheck" name="item" value="Drabble">Drabble<br>
+		<input type="checkbox"  class="writingcheck" name="item" value="Poetry">Poetry<br>
+		<input type="checkbox"  class="writingcheck" name="item" value="Dialogue">Dialogue<br>
+		<input type="checkbox"  class="writingcheck" name="item" value="Character Study">Character Study<br>
+		<input type="checkbox"  class="writingcheck" name="item" value="Character Description">Character Description<br>
+		<input type="checkbox"  class="writingcheck" name="item" value="Scenic Description">Scenic Description<br>
+		<input type="checkbox"  class="writingcheck" name="item" value="Unreliable Narrator">Unreliable Narrator<br>
+		
+		</div>
+		<button type="button" class="collapsible" onclick="openList('visual')">Visual Prompts</button>
+		<div class="content" id="visual">
+		<input type="checkbox"  onclick="toggle(this, 'visualcheck')"  > Select All<br>
+	    	<input type="checkbox"  class="visualcheck" name="item" value="Blue">Blue<br>
+		<input type="checkbox"  class="visualcheck" name="item" value="Yellow">Yellow<br>
+		<input type="checkbox"  class="visualcheck" name="item" value="Green">Green<br>
+		<input type="checkbox"  class="visualcheck" name="item" value="Red">Red<br>
+		<input type="checkbox"  class="visualcheck" name="item" value="Orange">Orange<br>
+		<input type="checkbox"  class="visualcheck" name="item" value="Purple">Purple<br>
+		<input type="checkbox"  class="visualcheck" name="item" value="Pink">Pink<br>
+		<input type="checkbox"  class="visualcheck" name="item" value="Greyscale">Greyscale<br>
+		<input type="checkbox"  class="visualcheck" name="item" value="Monochrome">Monochrome<br>
+		<input type="checkbox"  class="visualcheck" name="item" value="Duochrome">Duochrome<br>
+		<input type="checkbox"  class="visualcheck" name="item" value="Perspective">Perspective<br>
+		<input type="checkbox"  class="visualcheck" name="item" value="Character Design">Character Design<br>
+		<input type="checkbox"  class="visualcheck" name="item" value="Landscape">Landscape<br>
+		<input type="checkbox"  class="visualcheck" name="item" value="High Contrast">High Contrast<br>
+		<input type="checkbox"  class="visualcheck" name="item" value="Pastel">Pastel<br>
+		
+		</div>
+		</div>
+		
+		<!--Bingo <> --> <div class="mainBlock">
+		<canvas id="canvas" width="1120px" height="1120px"></canvas>
+		</div>
+		
+		<!--help <> --> <div class="mainBlock help">
+		<h1>
+		How to use:
+		</h1>
+		 <ul>
+      <li>Select bingo size (from 2x2 to 8x8 grid).</li>
+      <li>Open each category to select prompts of your choice.</li>
+      <li>Warning: angst/whump prompts mention psychological and physical violence.</li>
+      <li>Writing prompts contain writing rules, most suited for fanfictions.</li>
+      <li>Visual prompts are more suited for fan art, in any medium.</li>
+      <li>Selected categories are evenly represented. </li>
+      <li>If the grid isn't completely filled, make sure to have selected enough prompts.</li>
+    </ul> 
+    <h1>
+		Usage suggestions:
+		</h1>
+		<ul>
+      <li>On a 2x2 grid, select Character, angst, fluff, or themed prompts and either visual or writing. Create a work that fits all 4 elements.</li>
+      <li>On a mid-sized grid (3x3, 4x4 or 5x5), select a few different categories. Create works that fulfill as much of the grid as possible and mark the fulfilled prompts. Keep going until the grid is fully marked!</li>
+      <li>On a bigger grid (6x6 to 8x8), draw vertical, horizontal or diagonal lines and fulfill all the prompt crossed that way by a single fanwork. </li>
+      <li>On a mid-sized or big grid, select only characters and one type of prompts. Create a work that feature each pair of character found next to each other alongside the nearest prompt.</li>
+      <li>Anniversary Special! Pick a 6x6 grid with a mix of FFIV elements and prompts. Make pairs across the grid, create a small work for each pair, and post them from July 1st to July 19th (FFIV's anniversary).</li>
+    </ul> 
+		</div>
+	
+	
+
+		<script type="text/javascript" src="bingo_script.js"> 
+		</script> 
+		
+	
+
+
+</body></html>

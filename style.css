@@ -1,0 +1,33 @@
+
+html,
+body {
+  background: lightblue;
+}
+
+#canvas {
+    background: #fff;
+    margin: 20px;
+}
+
+.help {
+  width : 25%;
+}
+.lists {
+  width : 10%;
+}
+
+
+.mainBlock {
+  float: left;
+  padding: 15px; 
+}
+
+.collapsible {
+	display: block;
+}
+
+.content {
+	display: none;
+}
+
+
